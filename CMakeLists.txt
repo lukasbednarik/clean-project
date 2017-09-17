@@ -8,21 +8,26 @@ set(Kata_VERSION_MAJOR 0)
 set(Kata_VERSION_MINOR 0)
 
 # =============================================================================
-# Executable: kata
+# Library: kata
 # =============================================================================
 
 # Find dependencies
-find_package (Threads REQUIRED)
+find_package(Threads REQUIRED)
 
 # Add all source files
-set(KATA_SRCS
+set(KATALIB_SRCS
     src/myLib.cpp
-    src/main.cpp
 )
 
+add_library(katalib STATIC ${KATALIB_SRCS})
+
+# =============================================================================
+# Executable: kata
+# =============================================================================
+
 # Build and link executable
-add_executable(kata ${KATA_SRCS})
-target_link_libraries(kata ${CMAKE_THREAD_LIBS_INIT})
+add_executable(kata src/main.cpp)
+target_link_libraries(kata katalib ${CMAKE_THREAD_LIBS_INIT})
 
 # =============================================================================
 # Executable: kata-tests
@@ -35,16 +40,15 @@ include_directories(. src test)
 set(TESTS_SRCS
     3rdParty/catch.hpp
     3rdParty/fakeit.hpp
-    src/myLib.cpp
     tests/myLibTest.cpp
     tests/test.cpp
 )
 
 # Build and link executable
 add_executable(kata-test ${TESTS_SRCS})
-target_link_libraries(kata-test ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(kata-test katalib ${CMAKE_THREAD_LIBS_INIT})
 
 # =============================================================================
-# Run: watchdog-tests
+# Run: tests
 # =============================================================================
 add_custom_target(Test ALL COMMAND kata-test DEPENDS kata-test)

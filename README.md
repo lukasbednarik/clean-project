@@ -4,9 +4,32 @@ This is clean project for TDD / kata exercises.
 
 ## How to
 
-Compile with:
+### Linux
 
-```
-cmake .
-make -j4
-```
+1. Requirements: cmake, make, git, C++14 compiler.
+2. Clone the project:
+  ```bash
+  git clone https://github.com/sand-dollar/clean-project
+  cd clean-project
+  ```
+
+3. Build makefiles with cmake:
+  ```bash
+  cmake .
+  ```
+
+4. Compile executable and test binary with `make` or compile and run unit tests only with `make Test`.
+5. Tip: To compile with 4 cores add `-j4` parameter to make:
+  ```bash
+  make -j4 Test
+  ```
+
+### Windows
+
+1. Requirements: Visual Studio (at least [free Community edition](https://www.visualstudio.com/cs/downloads)), git.
+2. Clone the project in git shell:
+  ```bash
+  git clone https://github.com/sand-dollar/clean-project
+  ```
+
+3. Open Visual Studio project in `visual-studio` directory and build.
