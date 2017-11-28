@@ -29,4 +29,5 @@ This is clean project for TDD / kata exercises.
    ```bash
    git clone https://github.com/sand-dollar/clean-project
    ```
-3. Open Visual Studio solution in `visual-studio` directory and build.
+3. Open Visual Studio solution in `visual-studio` directory and build with `F7`.
+4. Execute tests with `Ctrl+F5`.
