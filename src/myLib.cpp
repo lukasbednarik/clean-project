@@ -1,6 +1,7 @@
 #include "myLib.h"
 
-bool SimpleTestFunction()
+std::string FizzBuzz(unsigned int n)
 {
-    return true;
+    std::string str;
+	return str;
 }
