@@ -4,13 +4,25 @@ This is clean project for TDD / kata exercises.
 
 ## How to
 
-### Linux
+### Java
+
+Install [Gradle](https://gradle.org/). Clone the project and build the project with Gradle:
+
+```bash
+git clone https://github.com/sand-dollar/clean-project
+cd clean-project/java
+gradle build
+```
+
+### C++
+
+#### Linux
 
 1. Requirements: cmake, make, git, C++14 compiler, some nice IDE like [VS Code](https://code.visualstudio.com/).
 2. Clone the project:
    ```bash
    git clone https://github.com/sand-dollar/clean-project
-   cd clean-project
+   cd clean-project/cpp
    ```
 3. Create makefile with cmake:
    ```bash
@@ -22,7 +34,7 @@ This is clean project for TDD / kata exercises.
    make -j4 Test
    ```
 
-### Windows
+#### Windows
 
 1. Requirements: Visual Studio (at least [free Community edition](https://www.visualstudio.com/cs/downloads)), git.
 2. Clone the project in git shell:
