@@ -4,6 +4,22 @@ This is clean project for TDD / kata exercises.
 
 ## How to
 
+### JavaScript
+
+Download package and install dependencies:
+
+```bash
+git clone https://github.com/sand-dollar/clean-project
+cd clean-project/javaScript
+npm install
+```
+
+Run tests:
+
+```bash
+npm test
+```
+
 ### Java
 
 Install [Gradle](https://gradle.org/). Clone the project and build the project with Gradle:
